@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Props } from "src/DatePicker/types"
 import { ref } from "vue"
+import { Props } from "../../types"
 import DpButton from "../DpButton/DpButton.vue"
 import DpCalendar from "../DpCalendar/DpCalendar.vue"
 import DpMonthPicker from "../DpMonthPicker/DpMonthPicker.vue"
