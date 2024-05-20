@@ -1,20 +1,50 @@
 {
   "name": "vue3-datepick",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "private": false,
+  "author": "FAL-coffee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FAL-coffee/vue3-datepicker-ja"
+  },
+  "keywords": [
+    "Vue.js",
+    "Vue3",
+    "component",
+    "datepicker",
+    "date-picker",
+    "ja",
+    "Japanese",
+    "日本語",
+    "カレンダー",
+    "日付",
+    "date-fns"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "vue": "^3.4.19"
+  },
   "dependencies": {
-    "vue": "^3.4.21"
+    "date-fns": "^3.3.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.1",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0",
-    "vue-tsc": "^2.0.6"
+    "vite": "^5.1.4",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
+    "vite-plugin-dts": "^3.7.3",
+    "vue": "^3.4.19",
+    "vue-tsc": "^1.8.27"
   }
 }

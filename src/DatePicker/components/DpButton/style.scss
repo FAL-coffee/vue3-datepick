@@ -1,0 +1,83 @@
+.datepicker {
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  &__button {
+    font-size: 1em;
+    width: 5em;
+    text-indent: -999em;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 2.5em;
+    text-align: left;
+
+    &:before {
+      content: "";
+      width: 2.2em;
+      height: 2.2em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -1.1em 0 0 -1.1em;
+      border-radius: 100%;
+      transition: background-color 0.2s;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      &:before {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    &:active:before {
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    &--next:before {
+      margin-left: -1.4em;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -0.5em;
+      width: 0;
+      height: 0;
+      border: 0.5em solid transparent;
+    }
+
+    &--prev {
+      left: -0.3em;
+
+      &:after {
+        margin-left: -0.8em;
+        border-right-color: $main-color;
+      }
+    }
+
+    &--next {
+      right: -0.6em;
+
+      &:after {
+        margin-left: -0.5em;
+        border-left-color: $main-color;
+      }
+    }
+  }
+}

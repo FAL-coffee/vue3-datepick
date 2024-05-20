@@ -1,0 +1,60 @@
+.calendar {
+  &__cell {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5em 0;
+  }
+
+  &__cell-content {
+    font-size: 1.8em;
+    display: block;
+    margin: 0 auto;
+    width: 1.857em;
+    line-height: 1.857em;
+    text-align: center;
+    border-radius: 100%;
+    transition: background 0.1s, color 0.1s;
+  }
+
+  &__cell--out-of-range {
+    color: #c7c7c7;
+  }
+
+  &__cell--today {
+    color: $main-color;
+
+    & > .calendar__cell-content {
+      color: #000;
+      border: 1px solid $sub-color;
+    }
+  }
+
+  &__cell--selected {
+    & > .calendar__cell-content {
+      font-weight: bold;
+      color: #fff;
+      background-color: $sub-color;
+    }
+  }
+
+  &__cell--selectable:hover {
+    & > .calendar__cell-content {
+      background-color: $sub-color !important;
+    }
+  }
+
+  &__cell--selectable {
+    cursor: pointer;
+  }
+
+  &__cell--disabled {
+    opacity: 0.5;
+  }
+}
+
+@media (hover: hover) {
+  .calendar__cell--selectable:hover .calendar__cell-content {
+    color: #fff;
+    background: $main-color;
+  }
+}
