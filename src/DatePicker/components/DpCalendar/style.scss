@@ -21,11 +21,11 @@
   }
 
   &__cell--today {
-    color: $main-color;
+    color: $vue3-datepick_main-color;
 
     & > .calendar__cell-content {
       color: #000;
-      border: 1px solid $sub-color;
+      border: 1px solid $vue3-datepick_sub-color;
     }
   }
 
@@ -33,13 +33,13 @@
     & > .calendar__cell-content {
       font-weight: bold;
       color: #fff;
-      background-color: $sub-color;
+      background-color: $vue3-datepick_sub-color;
     }
   }
 
   &__cell--selectable:hover {
     & > .calendar__cell-content {
-      background-color: $sub-color !important;
+      background-color: $vue3-datepick_sub-color !important;
     }
   }
 
@@ -55,6 +55,6 @@
 @media (hover: hover) {
   .calendar__cell--selectable:hover .calendar__cell-content {
     color: #fff;
-    background: $main-color;
+    background: $vue3-datepick_main-color;
   }
 }
