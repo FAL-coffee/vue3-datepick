@@ -5,6 +5,8 @@ import { defineConfig } from "vite"
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js"
 import dts from "vite-plugin-dts"
 
+const isDevMode = process.env.DEV_MODE === "local"
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -38,7 +40,9 @@ export default defineConfig({
     },
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "src/DatePicker/styles/variables.scss";`,
+        additionalData: isDevMode
+          ? `@import "dev/_variables.scss";`
+          : `@import "src/DatePicker/styles/variables.scss";`,
       },
     },
   },

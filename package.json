@@ -36,7 +36,7 @@
     "date-fns"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "DEV_MODE=true vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
@@ -47,6 +47,7 @@
     "date-fns": "^3.3.1"
   },
   "devDependencies": {
+    "@types/node": "^20.14.5",
     "@vitejs/plugin-vue": "^5.0.4",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
