@@ -67,7 +67,7 @@
 
       &:after {
         margin-left: -0.8em;
-        border-right-color: $main-color;
+        border-right-color: $vue3-datepick_main-color;
       }
     }
 
@@ -76,7 +76,7 @@
 
       &:after {
         margin-left: -0.5em;
-        border-left-color: $main-color;
+        border-left-color: $vue3-datepick_main-color;
       }
     }
   }
