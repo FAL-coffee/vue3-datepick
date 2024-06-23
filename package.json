@@ -5,14 +5,14 @@
   "files": [
     "/dist"
   ],
-  "main": "./dist/vue3-datepick.umd.js",
+  "main": "./dist/vue3-datepick.umd.cjs",
   "module": "./dist/vue3-datepick.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/vue3-datepick.js",
-      "require": "./dist/vue3-datepick.umd.js"
+      "require": "./dist/vue3-datepick.umd.cjs"
     }
   },
   "private": false,
