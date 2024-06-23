@@ -51,13 +51,16 @@ export const useDatePicker = (
 
   const handleInput = (e: Event) => {
     if (e.target instanceof HTMLInputElement) {
-      const userDate = parseDateString(e.target.value)
       inputValue.value = e.target.value
+    }
+  }
 
-      emit(
-        "update:modelValue",
-        userDate ? formatDateToString(userDate) : e.target.value
-      )
+  const handleFocusOut = () => {
+    const userDate = parseDateString(inputValue.value)
+    if (userDate && !props.isDateDisabled(userDate)) {
+      emit("update:modelValue", formatDateToString(userDate))
+    } else {
+      emit("update:modelValue", "")
     }
   }
 
@@ -136,6 +139,7 @@ export const useDatePicker = (
     openUpdated,
     closeUpdated,
     handleInput,
+    handleFocusOut,
     closeViaOverlay,
     incrementMonth,
     selectDateItem,

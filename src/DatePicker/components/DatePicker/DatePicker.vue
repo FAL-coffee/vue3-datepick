@@ -46,6 +46,7 @@ const {
   closeUpdated,
   inputValue,
   handleInput,
+  handleFocusOut,
   valueToInputFormat,
   currentPeriod,
   incrementMonth,
@@ -63,6 +64,7 @@ const {
       :toggle="toggle"
       :input-value="inputValue"
       :process-user-input="handleInput"
+      :process-user-focus-out="handleFocusOut"
       :value-to-input-format="valueToInputFormat"
     >
       <input
@@ -76,6 +78,7 @@ const {
         :disabled="props.disabled"
         :value="inputValue"
         @input="handleInput"
+        @focusout="handleFocusOut"
         @focus="openUpdated()"
         @click="openUpdated()"
       />
