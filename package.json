@@ -41,7 +41,12 @@
   "scripts": {
     "dev": "DEV_MODE=true vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "prettier --write .",
+    "lint": "yarn lint:js & yarn lint:style",
+    "lint:style": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
+    "lint:js": "eslint --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "vue": "^3.4.19"
@@ -73,5 +78,15 @@
     "vite-plugin-dts": "^3.7.3",
     "vue": "^3.4.19",
     "vue-tsc": "^1.8.27"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
   }
 }
