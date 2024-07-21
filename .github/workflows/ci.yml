@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint-style-prettier:
-    name: Lint, Stylelint, and Prettier Checks
+    name: Test, Lint, Stylelint, and Prettier Checks
     runs-on: ubuntu-latest
 
     steps:
@@ -35,3 +35,6 @@ jobs:
 
       - name: Run Prettier
         run: yarn prettier --check .
+
+      - name: Run Vitest
+        run: yarn test
