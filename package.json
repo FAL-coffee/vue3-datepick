@@ -46,7 +46,7 @@
     "prettier": "prettier --write .",
     "lint": "yarn lint:js & yarn lint:style",
     "lint:style": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
-    "lint:js": "eslint --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:js": "eslint --format=stylish --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "prepare": "husky install"
   },
   "peerDependencies": {
@@ -83,6 +83,11 @@
     "vitest": "^2.0.3",
     "vue": "^3.4.19",
     "vue-tsc": "^1.8.27"
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1",
+    "string-width": "4.2.2",
+    "wrap-ansi": "7.0.0"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
