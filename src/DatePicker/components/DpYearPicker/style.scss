@@ -3,7 +3,7 @@
     margin-left: -4px;
     font-size: 1.5em;
     font-weight: bold;
-    content: v-bind("props.yearContent");
+    content: v-bind('props.yearContent');
   }
 
   &__period-control > button {

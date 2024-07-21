@@ -1,3 +1,3 @@
 export type Props = {
-  direction: "next" | "prev"
+  direction: 'next' | 'prev'
 }

@@ -1,14 +1,14 @@
-import { Ref, computed, ref, watch } from "vue"
-import { useCloseEventListener } from "../../composables/useCloseEventListener"
-import { useDateUtilities } from "../../composables/useDateUtilities"
-import { useToggle } from "../../composables/useToggle"
-import { EnhancedDay, Props } from "../../types"
+import { Ref, computed, ref, watch } from 'vue'
+import { useCloseEventListener } from '../../composables/useCloseEventListener'
+import { useDateUtilities } from '../../composables/useDateUtilities'
+import { useToggle } from '../../composables/useToggle'
+import { EnhancedDay, Props } from '../../types'
 
 export const useDatePicker = (
   props: Required<Props>,
   el: Ref<Element | null>,
   outerWrap: Ref<Element | null>,
-  emit: (event: "update:modelValue", value: string) => void
+  emit: (event: 'update:modelValue', value: string) => void
 ) => {
   // Date utilities
   const {
@@ -58,9 +58,9 @@ export const useDatePicker = (
   const handleFocusOut = () => {
     const userDate = parseDateString(inputValue.value)
     if (userDate && !props.isDateDisabled(userDate)) {
-      emit("update:modelValue", formatDateToString(userDate))
+      emit('update:modelValue', formatDateToString(userDate))
     } else {
-      emit("update:modelValue", "")
+      emit('update:modelValue', '')
     }
   }
 
@@ -94,7 +94,7 @@ export const useDatePicker = (
   const selectDateItem = (item: EnhancedDay) => {
     if (!item.disabled) {
       const newDate = new Date(item.date)
-      emit("update:modelValue", formatDateToString(newDate))
+      emit('update:modelValue', formatDateToString(newDate))
       closeUpdated()
     }
   }
@@ -117,7 +117,7 @@ export const useDatePicker = (
   watch(
     () => props.modelValue,
     (value) => {
-      if (isValidValue) {
+      if (isValidValue.value) {
         inputValue.value = valueToInputFormat(value)
         currentPeriod.value = getPeriodFromValue(value)
       }

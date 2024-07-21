@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Props } from "./types"
+import { Props } from './types'
 const props = defineProps<Props>()
-const emit = defineEmits(["click"])
+const emit = defineEmits(['click'])
 
 const getClass = () => {
   return {
-    "datepicker__button--next": props.direction === "next",
-    "datepicker__button--prev": props.direction === "prev",
+    'datepicker__button--next': props.direction === 'next',
+    'datepicker__button--prev': props.direction === 'prev',
   }
 }
 </script>
@@ -22,5 +22,5 @@ const getClass = () => {
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

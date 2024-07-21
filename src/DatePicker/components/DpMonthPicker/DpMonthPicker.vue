@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Props } from "./types"
+import { Props } from './types'
 withDefaults(defineProps<Props>(), {})
 </script>
 
@@ -21,5 +21,5 @@ withDefaults(defineProps<Props>(), {})
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

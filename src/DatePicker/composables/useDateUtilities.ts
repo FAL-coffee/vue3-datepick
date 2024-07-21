@@ -9,7 +9,7 @@ import {
   isValid,
   parse,
   startOfMonth,
-} from "date-fns"
+} from 'date-fns'
 
 export function useDateUtilities(displayFormat: string) {
   /**
@@ -22,7 +22,7 @@ export function useDateUtilities(displayFormat: string) {
   ) => {
     const start = startOfMonth(new Date(year, month))
     const end = endOfMonth(new Date(year, month))
-    let days = eachDayOfInterval({ start, end })
+    const days = eachDayOfInterval({ start, end })
 
     // Add days from the previous month
     const startDayIndex = getDay(start)
@@ -50,8 +50,8 @@ export function useDateUtilities(displayFormat: string) {
    * Converts a Date object to a string in the format of props.displayFormat
    * Returns an empty string if the input is an empty string
    */
-  const formatDateToString = (date: Date | "") => {
-    return date ? format(date, displayFormat) : ""
+  const formatDateToString = (date: Date | '') => {
+    return date ? format(date, displayFormat) : ''
   }
 
   /**
@@ -62,10 +62,10 @@ export function useDateUtilities(displayFormat: string) {
    * Returns an empty string if the input is undefined or the parsing fails
    */
   const parseDateString = (dateString?: string) => {
-    if (!dateString) return ""
+    if (!dateString) return ''
 
     const parsedDate = parse(dateString, displayFormat, new Date())
-    return isValid(parsedDate) ? parsedDate : ""
+    return isValid(parsedDate) ? parsedDate : ''
   }
 
   /**

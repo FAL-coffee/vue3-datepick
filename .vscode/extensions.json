@@ -1,3 +1,15 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "wix.vscode-import-cost",
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker",
+    "mhutchie.git-graph",
+    "ms-vsliveshare.vsliveshare",
+    "bradlc.vscode-tailwindcss",
+    "syler.sass-indented",
+    "stylelint.vscode-stylelint"
+  ]
 }

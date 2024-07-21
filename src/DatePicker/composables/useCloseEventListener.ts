@@ -1,4 +1,4 @@
-import { Ref, onBeforeUnmount, ref } from "vue"
+import { Ref, onBeforeUnmount, ref } from 'vue'
 
 type CloseEventListener = EventListenerOrEventListenerObject | undefined
 
@@ -13,7 +13,7 @@ export const useCloseEventListener = (
     if (!closeEventListener.value) {
       closeEventListener.value = (event: Event) => {
         if ((event as KeyboardEvent).key) {
-          ;(event as KeyboardEvent).key === "Escape" && close()
+          ;(event as KeyboardEvent).key === 'Escape' && close()
         } else if (
           !(event.target === el.value) &&
           !el.value?.contains(event.target as Node)
@@ -21,7 +21,7 @@ export const useCloseEventListener = (
           close()
         }
       }
-      ;["click", "keyup", "focusin"].forEach((eventName) =>
+      ;['click', 'keyup', 'focusin'].forEach((eventName) =>
         document.addEventListener(eventName, closeEventListener.value!)
       )
     }
@@ -29,7 +29,7 @@ export const useCloseEventListener = (
 
   const removeCloseEvents = () => {
     if (closeEventListener.value) {
-      ;["click", "keyup", "focusin"].forEach((eventName) =>
+      ;['click', 'keyup', 'focusin'].forEach((eventName) =>
         document.removeEventListener(eventName, closeEventListener.value!)
       )
 
