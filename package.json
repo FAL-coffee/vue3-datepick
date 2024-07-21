@@ -42,6 +42,7 @@
     "dev": "DEV_MODE=true vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "test": "vitest run",
     "prettier": "prettier --write .",
     "lint": "yarn lint:js & yarn lint:style",
     "lint:style": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
@@ -55,6 +56,8 @@
     "date-fns": "^3.3.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/vue": "^8.1.0",
     "@types/node": "^20.14.5",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
@@ -64,6 +67,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.27.0",
     "husky": "^8.0.0",
+    "jsdom": "^24.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "sass": "^1.71.1",
@@ -76,17 +80,18 @@
     "vite": "^5.1.4",
     "vite-plugin-css-injected-by-js": "^3.4.0",
     "vite-plugin-dts": "^3.7.3",
+    "vitest": "^2.0.3",
     "vue": "^3.4.19",
     "vue-tsc": "^1.8.27"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "eslint --fix",
-      "prettier --write"
+      "yarn lint:js",
+      "yarn prettier"
     ],
     "*.{scss,css}": [
-      "stylelint --fix",
-      "prettier --write"
+      "yarn lint:style",
+      "yarn prettier"
     ]
   }
 }
