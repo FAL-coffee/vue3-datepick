@@ -10,9 +10,7 @@
       padding: 0;
       border: 0;
     }
-  }
 
-  &__button {
     font-size: 1em;
     width: 5em;
     text-indent: -999em;
@@ -22,8 +20,8 @@
     bottom: 2.5em;
     text-align: left;
 
-    &:before {
-      content: "";
+    &::before {
+      content: '';
       width: 2.2em;
       height: 2.2em;
       position: absolute;
@@ -38,21 +36,21 @@
     &:focus {
       outline: 0;
 
-      &:before {
-        background-color: rgba(0, 0, 0, 0.03);
+      &::before {
+        background-color: rgba(0, 0, 0, 3%);
       }
     }
 
-    &:active:before {
-      background-color: rgba(0, 0, 0, 0.07);
+    &:active::before {
+      background-color: rgba(0, 0, 0, 7%);
     }
 
-    &--next:before {
+    &--next::before {
       margin-left: -1.4em;
     }
 
-    &:after {
-      content: "";
+    &::after {
+      content: '';
       position: absolute;
       left: 50%;
       top: 50%;
@@ -65,7 +63,7 @@
     &--prev {
       left: -0.3em;
 
-      &:after {
+      &::after {
         margin-left: -0.8em;
         border-right-color: $vue3-datepick_main-color;
       }
@@ -74,7 +72,7 @@
     &--next {
       right: -0.6em;
 
-      &:after {
+      &::after {
         margin-left: -0.5em;
         border-left-color: $vue3-datepick_main-color;
       }

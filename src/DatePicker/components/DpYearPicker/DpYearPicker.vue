@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed } from "vue"
-import { range } from "../../utils/arrayUtils"
-import { Props } from "./types"
+import { computed } from 'vue'
+import { range } from '../../utils/arrayUtils'
+import { Props } from './types'
 const props = defineProps<Props>()
 
 const yearRange = computed(() => {
@@ -35,5 +35,5 @@ const yearRange = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

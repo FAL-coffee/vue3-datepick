@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import { Props } from "../../types"
-import DpButton from "../DpButton/DpButton.vue"
-import DpCalendar from "../DpCalendar/DpCalendar.vue"
-import DpMonthPicker from "../DpMonthPicker/DpMonthPicker.vue"
-import DpYearPicker from "../DpYearPicker/DpYearPicker.vue"
-import { useDatePicker } from "./useDatePicker"
+import { ref } from 'vue'
+import { Props } from '../../types'
+import DpButton from '../DpButton/DpButton.vue'
+import DpCalendar from '../DpCalendar/DpCalendar.vue'
+import DpMonthPicker from '../DpMonthPicker/DpMonthPicker.vue'
+import DpYearPicker from '../DpYearPicker/DpYearPicker.vue'
+import { useDatePicker } from './useDatePicker'
 
 const props = withDefaults(defineProps<Props>(), {
   yearFirst: true,
   months: () => [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ],
   startWeekOnSunday: false,
-  weekdays: () => ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  weekdays: () => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
   disabled: false,
-  placeholder: "Please select a date",
-  displayFormat: "yyyy.MM.dd",
+  placeholder: 'Please select a date',
+  displayFormat: 'yyyy.MM.dd',
   isDateDisabled: () => false,
-  yearContent: "",
+  yearContent: '',
 })
 
 const el = ref<Element | null>(null)
 const outerWrap = ref<Element | null>(null)
 
 const emit = defineEmits<{
-  (e: "update:modelValue", value: string): void
+  (e: 'update:modelValue', value: string): void
 }>()
 
 const {
@@ -137,5 +137,5 @@ const {
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

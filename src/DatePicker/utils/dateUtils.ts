@@ -7,7 +7,7 @@ import {
   isValid,
   parse,
   startOfMonth,
-} from "date-fns"
+} from 'date-fns'
 
 /**
  * Generates a list of calendar dates based on the given year and month
@@ -15,7 +15,7 @@ import {
 const generateCalendarDates = (year: number, month: number) => {
   const start = startOfMonth(new Date(year, month))
   const end = endOfMonth(new Date(year, month))
-  let days = eachDayOfInterval({ start, end })
+  const days = eachDayOfInterval({ start, end })
 
   // Add days from the previous month
   const startDayIndex = getDay(start)
@@ -40,8 +40,8 @@ const generateCalendarDates = (year: number, month: number) => {
  * Converts a Date object to a string in the format of displayFormat
  * Returns an empty string if the input is an empty string
  */
-const formatDateToString = (displayFormat: string, date: Date | "") => {
-  return date ? format(date, displayFormat) : ""
+const formatDateToString = (displayFormat: string, date: Date | '') => {
+  return date ? format(date, displayFormat) : ''
 }
 
 /**
@@ -53,10 +53,10 @@ const formatDateToString = (displayFormat: string, date: Date | "") => {
  * Returns an empty string if the input is undefined or parsing fails
  */
 const parseDateString = (displayFormat: string, dateString?: string) => {
-  if (!dateString) return ""
+  if (!dateString) return ''
 
   const parsedDate = parse(dateString, displayFormat, new Date())
-  return isValid(parsedDate) ? parsedDate : ""
+  return isValid(parsedDate) ? parsedDate : ''
 }
 
 /**

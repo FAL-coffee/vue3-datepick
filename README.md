@@ -26,9 +26,9 @@ npm install vue3-datepick
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
-import DatePicker from "vue3-datepick"
-const selectedDate = ref("")
+import { ref } from 'vue'
+import DatePicker from 'vue3-datepick'
+const selectedDate = ref('')
 </script>
 ```
 
@@ -36,10 +36,10 @@ const selectedDate = ref("")
 
 ```vue
 <script setup lang="ts">
-import { ref } from "vue"
-import DatePicker from "../src/DatePicker/components/DatePicker/DatePicker.vue"
+import { ref } from 'vue'
+import DatePicker from '../src/DatePicker/components/DatePicker/DatePicker.vue'
 
-const currentDate = defineModel("currentDate", {
+const currentDate = defineModel('currentDate', {
   type: String,
   default: () => {
     const date = new Date()
@@ -48,35 +48,35 @@ const currentDate = defineModel("currentDate", {
 })
 
 // set displayFormat to "yyyy.MM.dd"
-const desplayFormat = ref("yyyy.MM.dd")
+const desplayFormat = ref('yyyy.MM.dd')
 
 // set disabled to false
 const disabled = ref(false)
 
 // set placeholder to "Please select a date"
-const placeholder = ref("Please select a date")
+const placeholder = ref('Please select a date')
 
 // set isDateDisabled to disable Sundays
 const isDateDisabled = ref((date: Date) => date.getDay() === 0)
 
 // set months to the full list of months
 const months = ref([
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ])
 
 // set weekdays to the full list of weekdays
-const weekdays = ref(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
+const weekdays = ref(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])
 
 // set yearFirst to false
 const yearFirst = ref(false)
@@ -85,7 +85,7 @@ const yearFirst = ref(false)
 const startWeekOnSunday = ref(false)
 
 // set yearContent to ""
-const yearContent = ref("")
+const yearContent = ref('')
 </script>
 
 <template>

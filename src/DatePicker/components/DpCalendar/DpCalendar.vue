@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from "vue"
-import { useDateUtilities } from "../../composables/useDateUtilities"
-import { EnhancedDay } from "../../types"
-import { chunkArray } from "../../utils/arrayUtils"
-import { Props } from "./types"
+import { computed } from 'vue'
+import { useDateUtilities } from '../../composables/useDateUtilities'
+import { EnhancedDay } from '../../types'
+import { chunkArray } from '../../utils/arrayUtils'
+import { Props } from './types'
 
 const props = defineProps<Props>()
 
@@ -69,5 +69,5 @@ const currentPeriodDates = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

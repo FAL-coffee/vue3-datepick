@@ -1,4 +1,4 @@
-import { EnhancedDay } from "../../types"
+import { EnhancedDay } from '../../types'
 
 export type Props = {
   value: string
