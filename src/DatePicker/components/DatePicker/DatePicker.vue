@@ -32,8 +32,8 @@ const props = withDefaults(defineProps<Props>(), {
   yearContent: '',
 })
 
-const el = ref<Element | null>(null)
 const outerWrap = ref<Element | null>(null)
+const el = ref<Element | null>(null)
 
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
