@@ -24,6 +24,7 @@ export const useDatePicker = (
   // State
   const currentPeriod = ref(getPeriodFromValue(props.modelValue))
   const inputValue = ref(valueToInputFormat(props.modelValue))
+  const isClickInside = ref(false)
   // ------------------------------
 
   // Event listeners
@@ -56,12 +57,21 @@ export const useDatePicker = (
   }
 
   const handleFocusOut = () => {
+    if (isClickInside.value) {
+      isClickInside.value = false
+      return
+    }
+
     const userDate = parseDateString(inputValue.value)
     if (userDate && !props.isDateDisabled(userDate)) {
       emit('update:modelValue', formatDateToString(userDate))
     } else {
       emit('update:modelValue', '')
     }
+  }
+
+  const handleMousedown = () => {
+    isClickInside.value = true
   }
 
   const closeViaOverlay = (e: Event) => {
@@ -140,6 +150,7 @@ export const useDatePicker = (
     closeUpdated,
     handleInput,
     handleFocusOut,
+    handleMousedown,
     closeViaOverlay,
     incrementMonth,
     selectDateItem,

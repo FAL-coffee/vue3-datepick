@@ -47,6 +47,7 @@ const {
   inputValue,
   handleInput,
   handleFocusOut,
+  handleMousedown,
   valueToInputFormat,
   currentPeriod,
   incrementMonth,
@@ -89,6 +90,7 @@ const {
         ref="outerWrap"
         class="datepicker__outer-wrap"
         @click="closeViaOverlay"
+        @mousedown="handleMousedown"
       >
         <div class="datepicker__inner-wrap">
           <header class="datepicker__header">
@@ -104,7 +106,7 @@ const {
                 :current-period="currentPeriod"
                 :months="props.months"
               />
-              <DpYearPicker :current-period="currentPeriod" :yearContent />
+              <DpYearPicker :current-period="currentPeriod" :year-content />
             </div>
           </header>
           <table class="datepicker__table">
