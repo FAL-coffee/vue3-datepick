@@ -10,6 +10,7 @@ const mockSelectDateItem = vi.fn()
 const mockCloseViaOverlay = vi.fn()
 const mockHandleInput = vi.fn()
 const mockHandleFocusOut = vi.fn()
+const mockHandleMousedown = vi.fn()
 let opened = false
 
 vi.mock('./useDatePicker', () => ({
@@ -30,6 +31,7 @@ vi.mock('./useDatePicker', () => ({
     isValidValue: true,
     handleInput: mockHandleInput,
     handleFocusOut: mockHandleFocusOut,
+    handleMousedown: mockHandleMousedown,
     closeViaOverlay: mockCloseViaOverlay,
   })),
 }))
@@ -125,6 +127,17 @@ describe('DatePicker.vue', () => {
     await wrapper.find('.datepicker__outer-wrap').trigger('click')
 
     expect(mockCloseViaOverlay).toHaveBeenCalled()
+  })
+
+  it('should call handleMouseDown when mousedown outside', async () => {
+    opened = true
+    const wrapper = shallowMount(DatePicker, {
+      props: defaultProps,
+    })
+
+    await wrapper.find('.datepicker__outer-wrap').trigger('mousedown')
+
+    expect(mockHandleMousedown).toHaveBeenCalled()
   })
 
   it('should increment month correctly', async () => {
