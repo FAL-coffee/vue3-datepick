@@ -106,7 +106,10 @@ const {
                 :current-period="currentPeriod"
                 :months="props.months"
               />
-              <DpYearPicker :current-period="currentPeriod" :year-content />
+              <DpYearPicker
+                :current-period="currentPeriod"
+                :year-content="yearContent"
+              />
             </div>
           </header>
           <table class="datepicker__table">
