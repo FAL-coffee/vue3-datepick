@@ -46,7 +46,7 @@
     "prettier": "prettier --write .",
     "lint": "yarn lint:js & yarn lint:style",
     "lint:style": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
-    "lint:js": "eslint --format=stylish --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:js": "eslint --format=stylish --cache --cache-location ./node_modules/.cache/eslint .",
     "prepare": "husky install"
   },
   "peerDependencies": {
