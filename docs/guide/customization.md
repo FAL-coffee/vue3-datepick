@@ -13,42 +13,14 @@ Example:
 }
 ```
 
-## Slots
-
-`vue3-datepick` supports named slots for customizing the internal content of the date picker.
-
-### Custom Header
-
-You can replace the default header with your own custom content:
-
-```vue
-<DatePick>
-  <template #header>
-    <h3>Select a Date</h3>
-  </template>
-</DatePick>
-```
-
-### Custom Footer
-
-You can also customize the footer content by using the `footer` slot:
-
-```vue
-<DatePick>
-  <template #footer>
-    <p>Custom Footer Content</p>
-  </template>
-</DatePick>
-```
-
 ## Date Format Customization
 
-You can easily customize how the date is displayed using the `displayFormat` prop. The default format is `YYYY-MM-DD`.
+You can easily customize how the date is displayed using the `displayFormat` prop. The default format is `yyyy-MM-dd`.
 
 Example:
 
 ```vue
-<DatePick v-model="selectedDate" display-format="DD/MM/YYYY" />
+<DatePick v-model="selectedDate" display-format="dd/MM/yyyy" />
 ```
 
 ## Disable Specific Dates
