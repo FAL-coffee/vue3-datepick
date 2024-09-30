@@ -1,6 +1,6 @@
 import { mount, shallowMount } from '@vue/test-utils'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
-import { Props } from '../../types'
+import { Props } from '~/types'
 import DatePicker from './DatePicker.vue'
 
 const mockOpenUpdated = vi.fn()

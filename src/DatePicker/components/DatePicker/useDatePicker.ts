@@ -1,8 +1,8 @@
 import { Ref, computed, ref, watch } from 'vue'
-import { useCloseEventListener } from '../../composables/useCloseEventListener'
-import { useDateUtilities } from '../../composables/useDateUtilities'
-import { useToggle } from '../../composables/useToggle'
-import { EnhancedDay, Props } from '../../types'
+import { useCloseEventListener } from '~/composables/useCloseEventListener'
+import { useDateUtilities } from '~/composables/useDateUtilities'
+import { useToggle } from '~/composables/useToggle'
+import { EnhancedDay, Props } from '~/types'
 
 export const useDatePicker = (
   props: Required<Props>,

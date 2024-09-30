@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import DatePicker from '../src/DatePicker/components/DatePicker/DatePicker.vue'
+import DatePicker from '~/components/DatePicker/DatePicker.vue'
 /**
  * To debug using yarn link, follow these steps
  * Open a terminal and navigate to the root directory of your project.
@@ -67,8 +67,8 @@ const yearContent = ref('')
 <template>
   <div>
     <DatePicker
-      v-model="currentDate"
       ref="datePick"
+      v-model="currentDate"
       :months="months"
       :weekdays="weekdays"
       :year-first="yearFirst"

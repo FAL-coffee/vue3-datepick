@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import dts from 'vite-plugin-dts'
@@ -7,8 +7,12 @@ import dts from 'vite-plugin-dts'
 // https://vitejs.dev/config/
 export default defineConfig(
   (() => {
-    const isDevMode = process.env.DEV_MODE === 'true'
     return {
+      resolve: {
+        alias: {
+          '~': path.resolve(__dirname, './src/DatePicker'),
+        },
+      },
       plugins: [
         vue(),
         dts({
@@ -39,9 +43,7 @@ export default defineConfig(
         },
         preprocessorOptions: {
           scss: {
-            additionalData: isDevMode
-              ? `@import "dev/_variables.scss";`
-              : `@import "src/DatePicker/styles/variables.scss";`,
+            additionalData: `@import "src/DatePicker/styles/variables.scss";`,
           },
         },
       },

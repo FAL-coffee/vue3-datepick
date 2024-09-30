@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Props } from '../../types'
-import DpButton from '../DpButton/DpButton.vue'
-import DpCalendar from '../DpCalendar/DpCalendar.vue'
-import DpMonthPicker from '../DpMonthPicker/DpMonthPicker.vue'
-import DpYearPicker from '../DpYearPicker/DpYearPicker.vue'
+import { DpButton } from '~/components/DpButton'
+import { DpCalendar } from '~/components/DpCalendar'
+import { DpMonthPicker } from '~/components/DpMonthPicker'
+import { DpYearPicker } from '~/components/DpYearPicker'
+import { Props } from '~/types'
 import { useDatePicker } from './useDatePicker'
 
 const props = withDefaults(defineProps<Props>(), {
