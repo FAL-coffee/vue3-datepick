@@ -56,11 +56,11 @@ const selectedDate = ref('')
 
 ## Custom Date Format
 
-Customize the date format that is displayed in the input field. For example, use `DD/MM/YYYY` instead of the default `YYYY-MM-DD`.
+Customize the date format that is displayed in the input field. For example, use `dd/MM/yyyy` instead of the default `yyyy-MM-dd`.
 
 ```vue
 <template>
-  <DatePicker v-model="selectedDate" display-format="DD/MM/YYYY" />
+  <DatePicker v-model="selectedDate" display-format="dd/MM/yyyy" />
 </template>
 
 <script setup lang="ts">

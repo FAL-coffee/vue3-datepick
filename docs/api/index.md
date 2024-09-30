@@ -5,7 +5,7 @@
 | Prop                | Type       | Default               | Description                                       |
 | ------------------- | ---------- | --------------------- | ------------------------------------------------- |
 | `v-model`           | `String`   | `null`                | The selected date (two-way data binding).         |
-| `displayFormat`     | `String`   | `'YYYY-MM-DD'`        | The format used to display the date.              |
+| `displayFormat`     | `String`   | `'yyyy-MM-dd'`        | The format used to display the date.              |
 | `disabled`          | `Boolean`  | `false`               | Disables the date picker.                         |
 | `placeholder`       | `String`   | `null`                | Placeholder text for the input.                   |
 | `yearContent`       | `String`   | `null`                | Content to display for the year.                  |

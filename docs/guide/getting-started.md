@@ -25,11 +25,11 @@ In this example, the selected date is bound to the `selectedDate` variable using
 
 You can easily change the format of the date displayed in the input by using the `displayFormat` prop.
 
-Example: Set the date format to `MM/DD/YYYY`:
+Example: Set the date format to `MM/dd/yyyy`:
 
 ```vue
 <template>
-  <DatePicker v-model="selectedDate" display-format="MM/DD/YYYY" />
+  <DatePicker v-model="selectedDate" display-format="MM/dd/yyyy" />
 </template>
 
 <script setup lang="ts">
