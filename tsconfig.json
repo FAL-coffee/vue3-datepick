@@ -21,7 +21,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    /* Path aliases */
+    "paths": {
+      "~/*": ["src/DatePicker/*"]
+    }
   },
   "exclude": ["node_modules", "dist"],
   "include": [
